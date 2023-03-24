@@ -13,7 +13,7 @@ def remove_world_class(text: str, TAG: str) -> str:
   tagged = nltk.pos_tag(tokens, tagset='universal')
   for world, tag in tagged:
     if tag == TAG:
-        text = text.replace(world,"")
+        text = text.replace(world, "")
   return text
   
 
@@ -27,8 +27,4 @@ def remove_verbs(text: str) -> str:
     return remove_world_class(text, 'VERB')
 
 
-def main():
-    nltk.download('popular')
-    nltk.download('universal_tagset')
-
-main()
+ 
