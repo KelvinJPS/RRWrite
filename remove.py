@@ -2,7 +2,7 @@ import nltk
 
 
 def remove_punctuation_marks(text: str) -> str:
-    punctuation_marks = ['.', '?', ',', ';']
+    punctuation_marks = ['.', '?', ',', ';','!']
     for mark in punctuation_marks:
         text = text.replace(mark, "")
     return text
@@ -17,7 +17,8 @@ def remove_world_class(text: str, TAG: str) -> str:
   return text
   
 
-def remove_adjetives(text: str) -> str:
+
+def remove_adjectives(text: str) -> str:
     return remove_world_class(text,'ADJ')
 
 def remove_adverbs(text: str) -> str:
@@ -27,4 +28,4 @@ def remove_verbs(text: str) -> str:
     return remove_world_class(text, 'VERB')
 
 
- 
+

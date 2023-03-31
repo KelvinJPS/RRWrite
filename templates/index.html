@@ -17,8 +17,17 @@
       <input type="checkbox" id="verbs" name="verbs" value="verbs">
       <label for="verbs">verbs</label>
       <button type="submit">Remove</button>
-      <textarea name="text" id ="text" rows="50" cols="200"></textarea>
+      <textarea name="text" id ="text" rows="50" cols="200">{{ text }}</textarea>
     </form>   
+    <script>
+    // Get the textarea element
+    const textarea = document.getElementById('text');
+    // If the modified text is not empty, update the textarea value
+    {% if text %}
+    textarea.value = '{{ text }}';
+    {% endif %}
+</script>
+
   </body>
 </html>
 
