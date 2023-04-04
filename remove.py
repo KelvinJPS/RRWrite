@@ -9,6 +9,7 @@ def remove_punctuation_marks(text: str) -> str:
 
 
 def remove_world_class(text: str, TAG: str) -> str:
+  nltk.download('punkt')
   tokens = nltk.word_tokenize(text)
   tagged = nltk.pos_tag(tokens, tagset='universal')
   for world, tag in tagged:
